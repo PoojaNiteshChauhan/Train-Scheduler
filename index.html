@@ -5,27 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Train</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
   <link rel="stylesheet" href="../Train-Scheduler/Assets/css/style.css">
   
   <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 <body>
-  <div class="container">
+  <div class="container contact">
         <div class="wrapper animated bounceInLeft">
-          <div id ="TrainSchedule">
+          
+              <table class="table " >
+                  <thead class="thead-dark">
+                      <tr>
+                          <th class="col">Train Name</th>
+                          <th class="col">Destination</th>
+                          <th class="col">Frequency(min)</th>
+                          <th scope="col">Next Arrival</th>
+                          <th scope="col">Minutes Away</th>
+                          
+                      </tr>
+                  </thead>
+                  <tbody  id ="TrainSchedule">
+                      
+                  </tbody>
+              </table>
             
           </div>
 
           </div>
-
-  </div>
   <div class="container">
     
     <div class="wrapper animated bounceInLeft">
@@ -44,7 +59,7 @@
           </div>
           <p>
             <label>First Train Time(HH:MM-military time)</label>
-            <input type="number" name="number" id = "trainTime">
+            <input type="text" name="number" id = "trainTime">
           </p>
           <p>
             <label>Frequency(min)</label>
